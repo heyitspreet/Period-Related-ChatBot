@@ -1,0 +1,313 @@
+{"intents": [
+        {"tag": "greeting",
+         "patterns": ["Hi there", "How are you", "Is anyone there?","Hey","Hola", "Hello", "Good day"],
+         "responses": ["Hello, thanks for asking", "Good to see you again", "Hi there, how can I help?"],
+         "context": [""]
+        },
+        {"tag": "goodbye",
+         "patterns": ["Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time"],
+         "responses": ["See you!", "Have a nice day", "Bye! Come back again soon."],
+         "context": [""]
+        },
+        {"tag": "thanks",
+         "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"],
+         "responses": ["Happy to help!", "Any time!", "My pleasure"],
+         "context": [""]
+        },
+        {"tag": "noanswer",
+         "patterns": [],
+         "responses": ["Sorry, can't understand you", "Please give me more info", "Not sure I understand"],
+         "context": [""]
+        },
+
+        {"tag": "options",
+         "patterns": ["How you could help me?", "What you can do?", "What help you provide?", "How you can be helpful?", "What support is offered"],
+         "responses": ["I can guide you through Adverse drug reaction list, Blood pressure tracking, Hospitals and Pharmacies", "Offering support for Adverse drug reaction, Blood pressure, Hospitals and Pharmacies"],
+         "context": [""]
+        },
+        {"tag": "adverse_drug",
+         "patterns": ["How to check Adverse drug reaction?", "Open adverse drugs module", "Give me a list of drugs causing adverse behavior", "List all drugs suitable for patient with adverse reaction", "Which drugs dont have adverse reaction?" ],
+         "responses": ["Navigating to Adverse drug reaction module"],
+         "context": [""]
+        },
+        {"tag": "blood_pressure",
+         "patterns": ["Open blood pressure module", "Task related to blood pressure", "Blood pressure data entry", "I want to log blood pressure results", "Blood pressure data management" ],
+         "responses": ["Navigating to Blood Pressure module"],
+         "context": [""]
+        },
+        {"tag": "blood_pressure_search",
+         "patterns": ["I want to search for blood pressure result history", "Blood pressure for patient", "Load patient blood pressure result", "Show blood pressure results for patient", "Find blood pressure results by ID" ],
+         "responses": ["Please provide Patient ID", "Patient ID?"],
+         "context": ["search_blood_pressure_by_patient_id"]
+        },
+        {"tag": "search_blood_pressure_by_patient_id",
+         "patterns": [],
+         "responses": ["Loading Blood pressure result for Patient"],
+         "context": [""]
+        },
+        {"tag": "pharmacy_search",
+         "patterns": ["Find me a pharmacy", "Find pharmacy", "List of pharmacies nearby", "Locate pharmacy", "Search pharmacy" ],
+         "responses": ["Please provide pharmacy name"],
+         "context": ["search_pharmacy_by_name"]
+        },
+        {"tag": "search_pharmacy_by_name",
+         "patterns": [],
+         "responses": ["Loading pharmacy details"],
+         "context": [""]
+        },
+        {"tag": "hospital_search",
+         "patterns": ["Lookup for hospital", "Searching for hospital to transfer patient", "I want to search hospital data", "Hospital lookup for patient", "Looking up hospital details" ],
+         "responses": ["Please provide hospital name or location"],
+         "context": ["search_hospital_by_params"]
+        },
+        {"tag": "search_hospital_by_params",
+         "patterns": [],
+         "responses": ["Please provide hospital type"],
+         "context": ["search_hospital_by_type"]
+        },
+        {"tag": "search_hospital_by_type",
+         "patterns": [],
+         "responses": ["Loading hospital details"],
+         "context": [""]
+        },
+        {
+                "tag": "menstrual_symptoms_specific",
+                "patterns": [
+                    "Abdominal bloating",
+                    "Constipation or diarrhea during periods",
+                    "Hot flashes or chills",
+                    "Excessive sweating",
+                    "Rapid heartbeat or palpitations",
+                    "Changes in libido",
+                    "Skin sensitivity",
+                    "Clumsiness or coordination issues",
+                    "Migraines or severe headaches",
+                    "Emotional sensitivity or mood changes"
+                ],
+                "responses": [
+                    "Abdominal bloating, constipation or diarrhea, hot flashes, excessive sweating, rapid heartbeat, changes in libido, skin sensitivity, clumsiness, migraines, and emotional sensitivity are among the various menstrual cycle symptoms. These may require different approaches for management. Seeking advice from a healthcare professional can offer suitable strategies."
+                ],
+                "context": [""]
+            },
+            {
+                "tag": "menstrual_symptoms_specific",
+                "patterns": ["Nausea during menstruation", "Digestive issues", "Acne flare-ups", "Fatigue and tiredness", "Joint or muscle pain", "Increased hunger or food cravings", "Sleep disturbances", "Anxiety before periods", "Dizziness or lightheadedness", "Sensitivity to light or sound during menstruation"],
+                "responses": ["Nausea, digestive issues, acne flare-ups, fatigue, joint or muscle pain, increased hunger or cravings, sleep disturbances, anxiety, dizziness, and sensitivity to light or sound are also common menstrual symptoms. Managing these might involve lifestyle adjustments or seeking medical advice for relief."],
+                "context": [""]
+            },
+            {
+                "tag": "pcos_symptoms",
+                "patterns": [
+                    "Irregular periods with long cycles",
+                    "Excess hair growth (hirsutism)",
+                    "Acne or oily skin",
+                    "Weight gain or difficulty losing weight",
+                    "Thinning hair or hair loss on the scalp",
+                    "Pelvic pain",
+                    "Darkening of skin (acanthosis nigricans)",
+                    "Mood swings or depression",
+                    "Sleep disturbances",
+                    "Infertility or difficulty getting pregnant"
+                ],
+                "responses": [
+                    "PCOS symptoms may include irregular periods, excess hair growth (hirsutism), acne, weight changes, hair thinning or loss, pelvic pain, skin darkening, mood swings, sleep disturbances, and challenges with fertility. Proper diagnosis and management often involve a combination of lifestyle changes and medical treatment. Consulting a healthcare professional is advised for personalized guidance."
+                ],
+                "context": [""]
+            },
+            {
+                "tag": "amenorrhea_symptoms",
+                "patterns": [
+                    "No menstrual periods",
+                    "Sudden cessation of periods",
+                    "Hair loss",
+                    "Vision changes",
+                    "Milky nipple discharge"
+                ],
+                "responses": [
+                    "Amenorrhea symptoms include the absence of menstrual periods, sudden cessation of periods, hair loss, headaches, vision changes, and milky nipple discharge. Identifying the underlying cause is crucial for appropriate treatment. Consultation with a healthcare provider is recommended."
+                ],
+                "context": [""]
+            },
+            {
+                "tag": "endometriosis_symptoms",
+                "patterns": [
+                    "Pelvic pain (especially during periods)",
+                    "Pain during intercourse",
+                    "Heavy menstrual bleeding",
+                    "Infertility",
+                    "Fatigue",
+                    "Painful bowel movements or urination during periods",
+                    "Digestive issues"
+                ],
+                "responses": [
+                    "Endometriosis symptoms include pelvic pain (especially during periods), pain during intercourse, heavy menstrual bleeding, infertility, fatigue, painful bowel movements or urination during periods, and digestive issues. Seeking medical evaluation and treatment is essential for managing endometriosis."
+                ],
+                "context": [""]
+            },
+            {
+                "tag": "pms_symptoms",
+                "patterns": [
+                    "Mood swings before periods",
+                    "Breast tenderness",
+                    "Food cravings or appetite changes",
+                    "Fatigue or low energy",
+                    "Sleep disturbances",
+                    "Headaches",
+                    "Bloating or fluid retention",
+                    "Muscle or joint pain",
+                    "Acne flare-ups"
+                ],
+                "responses": [
+                    "Premenstrual Syndrome (PMS) symptoms can include mood swings, breast tenderness, food cravings, fatigue, sleep disturbances, headaches, bloating, muscle or joint pain, and acne flare-ups. Adopting lifestyle changes and seeking medical advice can assist in managing PMS symptoms."
+                ],
+                "context": [""]
+            },
+            {
+                "tag": "polymenorrhea_symptoms",
+                "patterns": [
+                    "Menstrual cycles occurring less than 21 days apart",
+                    "Shortened menstrual cycles",
+                    "Regular periods with little time in between",
+                    "Bleeding or spotting between periods",
+                    "Menstrual cycles occurring less than 21 days apart",
+                    "Shortened menstrual cycles",
+                    "Regular periods with little time in between",
+                    "Bleeding between periods",
+                    "spotting between periods"
+                ],
+                "responses": [
+                    "Polymenorrhea symptoms involve menstrual cycles occurring less than 21 days apart, shortened cycles, regular periods with little time in between, and experiencing bleeding or spotting between periods. Seeking medical advice for identifying the cause and appropriate management is recommended."
+                ],
+                "context": [""]
+            },
+            {
+                "tag": "menstrual_jokes",
+                "patterns": [
+                    "Tell me a funny period joke",
+                    "Got any menstrual humor?",
+                    "Share a joke about periods",
+                    "Tell me something funny about menstruation"
+                ],
+                "responses": [
+                    "Why did the girl bring string to the party? Because she wanted to tamponade the situation!",
+                    "What do you call a menstruating woman on a swing? Motion Sickness!",
+                    "Why was the math book sad during menstruation? It had too many problems!",
+                    "How does a menstruating woman greet people? 'Hi, period! Nice to see you!'"
+                ],
+                "context": [""]
+            },
+            {
+                "tag": "indian_menstruation_medication",
+                "patterns": [
+                    "medications for menstrual pain",
+                    "Pain relief during periods",
+                    "Common drugs for menstrual cramps"
+                ],
+                "responses": [
+                    "Common medications in India for menstrual pain relief often include drugs like mefenamic acid (Ponstan, Dolfenal), diclofenac (Voveran), and ibuprofen (Ibugesic). These drugs belong to the class of nonsteroidal anti-inflammatory drugs (NSAIDs) and are commonly used to alleviate menstrual cramps and discomfort. It's essential to consult a healthcare professional before taking any medication for menstrual symptoms."
+                ],
+                "context": [""]
+            },
+            {
+                "tag": "diet_period_pain",
+                "patterns": [
+                    "Diet suggestions for period pain",
+                    "Foods to ease menstrual cramps",
+                    "Dietary tips during menstruation"
+                ],
+                "responses": [
+                    "During menstruation, consider including foods rich in magnesium (like dark leafy greens, nuts, seeds), calcium (such as dairy, fortified plant-based milk), omega-3 fatty acids (found in fatty fish, flaxseeds, chia seeds), and vitamin E (like almonds, spinach). Additionally, consuming fruits, vegetables, whole grains, and staying hydrated by drinking plenty of water can help reduce period pain. Reducing caffeine, sugar, and salt intake might also help manage discomfort."
+                ],
+                "context": [""]
+            },
+            {
+                "tag": "exercises_during_periods",
+                "patterns": [
+                    "Exercises for period",
+                    "Workouts during menstruation",
+                    "Physical activities during periods"
+                ],
+                "responses": [
+                    "Gentle exercises like walking, yoga, or swimming can help relieve menstrual cramps and boost mood during periods. Stretching exercises or yoga poses focusing on gentle twists, forward bends, and child's pose might alleviate discomfort. Low-impact exercises like cycling or light aerobics can also be beneficial. Listen to your body and choose exercises that feel comfortable. It's essential to stay hydrated and take breaks if needed."
+                ],
+                "context": [""]
+            },
+            {
+                "tag": "yoga_during_periods",
+                "patterns": [
+                    "Yoga poses for periods",
+                    "Specific yoga exercises during menstruation",
+                    "Yoga for menstrual cramps"
+                ],
+                "responses": [
+                    "Yoga poses that may help during periods include: \n\n1. Child's Pose (Balasana): Gentle forward bend that can relieve lower back and abdominal discomfort.\n2. Cat-Cow Stretch: Helps to ease tension in the spine and abdominal area.\n3. Supine Twist: Relaxes the lower back and can alleviate discomfort.\n4. Legs-Up-The-Wall Pose (Viparita Karani): A relaxing inversion that can help ease menstrual cramps and reduce bloating.\n5. Cobra Pose (Bhujangasana): May alleviate backaches and improve mood by stretching the spine.\n\nRemember to perform these poses gently and listen to your body. Avoid strenuous poses or inversions that might cause discomfort."
+                ],
+                "context": [""]
+            },
+            {
+                "tag": "herbal_medicines_periods",
+                "patterns": [
+                    "Herbal remedies for periods",
+                    "Natural treatments for menstrual pain",
+                    "Herbs for menstrual discomfort",
+                    "Natural remidies"
+                ],
+                "responses": [
+                    "Herbal remedies that might help alleviate menstrual discomfort include: \n\n1. Ginger: Known for its anti-inflammatory properties, it may reduce period pain when consumed as tea or added to meals.\n2. Chamomile: Has soothing effects that may help relax muscles and reduce menstrual cramps when consumed as tea.\n3. Peppermint: Known for its calming effect, it may ease digestive issues often associated with menstruation.\n4. Raspberry Leaf: Believed to tone the uterus and potentially reduce heavy bleeding or cramping when consumed as tea.\n5. Turmeric: Its anti-inflammatory properties might assist in reducing period pain when consumed in food or as a supplement.\n\nIt's essential to consult with a healthcare professional or an herbalist before using herbal remedies, especially if you have any underlying health conditions or if you're on medications."
+                ],
+                "context": [""]
+            },
+            {
+                "tag": "menstrual_symptoms",
+                "patterns": ["Common menstrual symptoms", "Symptoms during menstruation", "Menstrual cycle symptoms", "Typical period symptoms"],
+                "responses": ["Common symptoms include cramps, bloating, mood swings, fatigue, and headaches."],
+                "context": [""]
+            },
+            {
+                "tag": "cycle_length",
+                "patterns": [
+                    "What's a normal menstrual cycle length?",
+                    "How long should a menstrual cycle be?",
+                    "What's the average duration of a menstrual cycle?"
+                ],
+                "responses": [
+                    "A normal menstrual cycle typically ranges from 21 to 35 days, counting from the first day of one period to the first day of the next. However, variations in cycle length can be normal for individuals."
+                ],
+                "context": [""]
+            },
+            {
+                "tag": "flow_amount",
+                "patterns": [
+                    "How much menstrual flow is normal?",
+                    "What's a typical amount of blood during menstruation?",
+                    "Is heavy menstrual flow a concern?"
+                ],
+                "responses": [
+                    "Normal menstrual flow varies, but on average, women lose around 30 to 40 milliliters (2 to 3 tablespoons) of blood during a period. Heavy flow exceeding 80 milliliters (5 tablespoons) might warrant medical attention."
+                ],
+                "context": [""]
+            },
+            {
+                "tag": "irregularities",
+                "patterns": [
+                    "What causes irregular periods?",
+                    "Is it normal to have irregular menstrual cycles?",
+                    "What are common causes of missed periods?"
+                ],
+                "responses": [
+                    "Irregular periods can be due to various factors such as stress, hormonal imbalances, weight changes, and certain health conditions. Occasional irregularities are common, but persistent irregularities might need evaluation by a healthcare professional."
+                ],
+                "context": [""]
+            }
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+   ]
+}
