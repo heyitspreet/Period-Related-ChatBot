@@ -75,11 +75,15 @@
                 "patterns": [
                     "Abdominal bloating",
                     "Constipation or diarrhea during periods",
+                    "watery stool",
                     "Hot flashes or chills",
                     "Excessive sweating",
                     "Rapid heartbeat or palpitations",
                     "Changes in libido",
                     "Skin sensitivity",
+                    "Stomach ache",
+                    "Pain in the Stomach",
+                    "Blood drop",
                     "Clumsiness or coordination issues",
                     "Migraines or severe headaches",
                     "Emotional sensitivity or mood changes"
@@ -224,6 +228,7 @@
                 "tag": "exercises_during_periods",
                 "patterns": [
                     "Exercises for period",
+                    "Can you give me a few excersises durig my periods",
                     "Workouts during menstruation",
                     "Physical activities during periods"
                 ],

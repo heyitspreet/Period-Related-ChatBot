@@ -9,6 +9,7 @@ from keras.models import load_model
 model = load_model('chatbot_model.h5')
 import json
 import random
+
 intents = json.loads(open('intents.json').read())
 words = pickle.load(open('words.pkl','rb'))
 classes = pickle.load(open('classes.pkl','rb'))
@@ -64,9 +65,11 @@ def chatbot_response(msg):
     return res
 
 
-from flask import Flask, render_template, request
-
+from flask import Flask, render_template, request, jsonify
+from flask_cors import CORS, cross_origin
 app = Flask(__name__)
+cors = CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
 app.static_folder = 'static'
 
 @app.route("/")
@@ -74,10 +77,11 @@ def home():
     return render_template("index.html")
 
 @app.route("/get")
+@cross_origin()
 def get_bot_response():
     userText = request.args.get('msg')
-    return chatbot_response(userText)
+    return jsonify({'status':'OK','answer':chatbot_response(userText)})
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(host="0.0.0.0", port=5000, debug=True, threaded=True)
